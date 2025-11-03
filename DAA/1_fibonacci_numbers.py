@@ -19,17 +19,18 @@ def non_recursive_fibonacci(n):
         n -= 1
 
 if __name__ == "__main__":
-    n = 10
+    # ✅ User input
+    n = int(input("Enter the number of terms: "))
 
-    # Time the recursive version
+    # 🕒 Time the recursive version
     start_time = time.time()
-    print("Recursive Fibonacci Sequence:")
+    print("\nRecursive Fibonacci Sequence:")
     for i in range(n):
         print(recursive_fibonacci(i))
     end_time = time.time()
     print(f"Time taken by recursive method: {end_time - start_time:.6f} seconds\n")
 
-    # Time the non-recursive version
+    # 🕒 Time the non-recursive version
     start_time = time.time()
     print("Non-Recursive Fibonacci Sequence:")
     non_recursive_fibonacci(n)
